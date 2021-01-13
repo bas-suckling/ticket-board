@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
-import { GET_TICKETS } from './graphql/queries/getTickets';
-import {organisationId} from './organisation'
+import { GET_TICKETS } from '../graphql/queries/getTickets';
+import {organisationId} from '../organisation'
 import Ticket from './Ticket'
 
 function TicketLoader({board}) {

@@ -1,5 +1,5 @@
-import DeleteButton from './DeleteButton'
-
+import DeleteTicketButton from './DeleteTicketButton'
+import UpdateTicketButton from './UpdateButton';
 
 function Ticket({ board, ticket }) {
     const { id, name, description, status } = ticket;
@@ -9,7 +9,7 @@ function Ticket({ board, ticket }) {
 
     return (
         <div className="ticket" id={id}>
-            {name}, {description}, {status} <DeleteButton id={id} board={board} />
+            {name}, {description}, {status} <UpdateTicketButton/> <DeleteTicketButton id={id} board={board} /> 
         </div>
     );
 }
