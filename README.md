@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Dummy Info
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+USER: 
+    "id": "ca124159-e96c-40df-8d2a-98d2cfade7fe",
+    "email": "Bas@example.com",
+    "firstName": "Bas",
+    "lastName": "Suckling",
+    "createdAt": "2021-01-13T00:11:26.367853Z",
+    "updatedAt": "2021-01-13T00:11:26.367858Z",
 
-## Available Scripts
+ORGANISATION: 
+    "id": "d8430294-c8d2-457d-a558-456be4ae57b8",
+    "name": "Example Company",
+    "createdAt": "2021-01-13T00:12:38.178785Z",
+    "updatedAt": "2021-01-13T00:12:38.178789Z",
 
-In the project directory, you can run:
+BOARDS: 
+    "id": "b5b8d829-1623-4e88-8697-deefa48c4222",
+    "name": "Internal Tickets",
+    "createdAt": "2021-01-13T00:15:11.872951Z",
+    "updatedAt": "2021-01-13T00:15:11.872955Z",
+    "tickets": []
 
-### `npm start`
+    "id": "6c128202-dc0b-49c7-ae86-6e6c4dad2f63",
+    "name": "Client Tickets",
+    "createdAt": "2021-01-13T00:16:01.676082Z",
+    "updatedAt": "2021-01-13T00:16:01.676085Z",
+    "tickets": []    
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+INTERNAL TICKETS:
+    "id": "9eeff659-55b7-4fba-a831-62fea94a2f5e",
+    "name": "Kitchen Issues",
+    "description": "Create a passive agressive sign for the kitchen about cleaning",
+    "status": "TODO",
+    "visible": true
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    "id": "9cc630a4-f264-4b5e-b3ab-84f1c8705034",
+    "name": "Build complex hiring assessment",
+    "description": "Write a coding assessment challenge for potential hires",
+    "status": "DONE",
+    "visible": true
 
-### `npm test`
+CLIENT TICKETS:
+    "id": "49c7006a-dd0e-4f00-8a6d-cd819b993eb0",
+    "name": "Project 1 SOW",
+    "description": "Provide SOW for upcoming Project 1",
+    "status": "DONE",
+    "visible": true
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    
