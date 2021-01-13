@@ -1,6 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 
-const GET_ORGANISATION = gql`
+// queries using organisationID and returns org info and array of boards
+const GET_BOARDS = gql`
     query organisation($organisationId: ID!) {
         organisation(organisationId: $organisationId) {
             id
@@ -19,7 +20,7 @@ const GET_ORGANISATION = gql`
 
 // This will be used elsewhere
 function Organisaion({organisaionID}) {
-    const { loading, error, data } = useQuery(GET_ORGANISATION, {
+    const { loading, error, data } = useQuery(GET_BOARDS, {
         variables: {organisaionID},
     })
 
