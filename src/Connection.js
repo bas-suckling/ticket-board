@@ -1,8 +1,8 @@
 import ApolloClient, {split, HttpLink} from '@apollo/client';
 import getMainDefinition from '@apollo/client/utilities'
-import {WebSocketLink} from '@apollo/client/link/ws'
+// import {WebSocketLink} from '@apollo/client/link/ws'
 // import { InMemoryCache } from 'apollo-boost';
-import {SubscriptionClient} from 'subscriptions-transport-ws'
+// import {SubscriptionClient} from 'subscriptions-transport-ws'
 
 // Create an http link:
 const httpLink = new HttpLink({
@@ -13,14 +13,14 @@ const httpLink = new HttpLink({
 });
 
 // Create a WebSocket link:
-const wsLink = new WebSocketLink(new SubscriptionClient(`wss://156hxo0ega.execute-api.us-east-1.amazonaws.com/example`, {
-  reconnect: true,
-  connectionParams: async () => {
-    return {
-      Authorization: {}
-    }
-  }
-}, undefined, []));
+// const wsLink = new WebSocketLink(new SubscriptionClient(`wss://156hxo0ega.execute-api.us-east-1.amazonaws.com/example`, {
+//   reconnect: true,
+//   connectionParams: async () => {
+//     return {
+//       Authorization: {}
+//     }
+//   }
+// }, undefined, []));
 
 const link = split(
   // split based on operation type
@@ -31,7 +31,7 @@ const link = split(
       definition.operation === 'subscription'
     );
   },
-  wsLink,
+  // wsLink,
   httpLink
 );
 
