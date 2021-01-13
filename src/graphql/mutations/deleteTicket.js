@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 //Delete a ticket
 export const DELETE_TICKET = gql`

@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 //To create a ticket don't pass an id
 export const PUT_TICKET = gql`
