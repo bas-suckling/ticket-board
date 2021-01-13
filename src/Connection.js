@@ -8,7 +8,7 @@ import {SubscriptionClient} from 'subscriptions-transport-ws'
 const httpLink = new HttpLink({
   uri: 'https://w6tcrg3sb4.execute-api.us-east-1.amazonaws.com/example-example-graphql-api',
   headers: {
-    'Authorization': 1
+    'Authorization': {}
   }
 });
 
@@ -17,7 +17,7 @@ const wsLink = new WebSocketLink(new SubscriptionClient(`wss://156hxo0ega.execut
   reconnect: true,
   connectionParams: async () => {
     return {
-      Authorization: 1
+      Authorization: {}
     }
   }
 }, undefined, []));
