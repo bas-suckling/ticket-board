@@ -2,11 +2,9 @@ import { useMutation } from "@apollo/client";
 import { PUT_TICKET } from "../graphql/mutations/putTicket";
 import { organisationId } from '../organisation'
 import {useState} from 'react'
-import NewTicketForm from './NewTicketForm'
+import UpdateTicketForm from './UpdateTicketForm'
 
-
-
-function UpdateTicketButton ({board}){
+function UpdateTicketButton ({board, ticket}){
 
     const [isVisible, setIsVisible] = useState(false)
 
@@ -21,7 +19,7 @@ function UpdateTicketButton ({board}){
     return (
     <>
     <button onClick={onClick}>Update</button>
-                {isVisible ? <NewTicketForm board={board}/> : <br/>}
+                {isVisible ? <UpdateTicketForm board={board} ticket={ticket}/> : <br/>}
             </>
     )
 }
