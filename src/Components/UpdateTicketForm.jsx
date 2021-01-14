@@ -3,13 +3,11 @@ import { PUT_TICKET } from "../graphql/mutations/putTicket";
 import { organisationId } from '../organisation'
 import { useInput } from './hooks/useInput'
 
-
 function UpdateTicketForm({ board, ticket }) {
     const { value: name, bind: bindName, reset: resetName } = useInput(`${ticket.name}`);
     const { value: description, bind: bindDescription, reset: resetDescription } = useInput(`${ticket.description}`);
     const { value: status, bind: bindStatus, reset: resetStatus } = useInput(`${ticket.status}`);
-    let visible = true
-    console.log(status)
+    const visible = true
 
     const [updateTicket] = useMutation(PUT_TICKET, {
     })
