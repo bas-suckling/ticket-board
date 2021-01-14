@@ -10,12 +10,8 @@ function Ticket({ board, ticket }) {
     // edit ticket does not need an update method as apollo knows based on the ID
 
     return (
-        <TableRow key={id}>
-              <TableCell component="th" scope="row">{name}</TableCell>
-              <TableCell align="left">{description}</TableCell>
-              <TableCell align="center">{status}</TableCell>
-              <TableCell align="right"><UpdateTicketButton board={board} ticket={ticket}/> <DeleteTicketButton id={id} board={board} /></TableCell>
-        </TableRow>
+            <li> Ticket Name: {name}, Description:  {description}, Status: {status} <UpdateTicketButton board={board} ticket={ticket}/> <DeleteTicketButton id={id} board={board} /> </li>
+        
     );
 }
 

@@ -5,9 +5,9 @@ import { useInput } from './hooks/useInput'
 
 
 function UpdateTicketForm({ board, ticket }) {
-    const { value: name, bind: bindName, reset: resetName } = useInput('');
-    const { value: description, bind: bindDescription, reset: resetDescription } = useInput('');
-    const { value: status, bind: bindStatus, reset: resetStatus } = useInput('TODO');
+    const { value: name, bind: bindName, reset: resetName } = useInput(`${ticket.name}`);
+    const { value: description, bind: bindDescription, reset: resetDescription } = useInput(`${ticket.description}`);
+    const { value: status, bind: bindStatus, reset: resetStatus } = useInput(`${ticket.status}`);
     let visible = true
     console.log(status)
 

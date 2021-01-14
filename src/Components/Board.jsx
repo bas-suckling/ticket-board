@@ -31,8 +31,10 @@ function TicketLoader({ board }) {
   if (error) return `Error! ${error}`;
 
   return (
-    data.board.tickets.map((ticket) => <Ticket board={board} ticket={ticket} key={ticket.id} />
-    ))
+    <ul>
+      {data.board.tickets.map((ticket) => <Ticket board={board} ticket={ticket} key={ticket.id} />)}
+    </ul>
+  )
 }
 
 function Board({ board }) {
@@ -40,21 +42,7 @@ function Board({ board }) {
   return (
     <div className="board" key={board.id}>
       <h2>{board.name}</h2>
-      <TableContainer component={Paper}>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow className={classes.header}>
-              <TableCell>Ticket Name</TableCell>
-              <TableCell align="left">Ticket Description</TableCell>
-              <TableCell align="center">Status</TableCell>
-              <TableCell align="right">Modify</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TicketLoader board={board} />
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <TicketLoader board={board} />
       <NewTicket board={board} />
     </div >
   );
