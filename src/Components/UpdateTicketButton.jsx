@@ -17,11 +17,13 @@ function UpdateTicketButton ({board}){
     // });
 
     // return <button onClick={() => updateTicket(id)}>Update</button>
-    return <>
     
-        <button onClick={onClick}>Update</button>
-        {isVisible ? <NewTicketForm board={board}/> : <br/>}
-    </>
+    return (
+    <>
+    <button onClick={onClick}>Update</button>
+                {isVisible ? <NewTicketForm board={board}/> : <br/>}
+            </>
+    )
 }
 
 export default UpdateTicketButton

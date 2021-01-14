@@ -18,6 +18,7 @@ const useStyles = makeStyles({
   table: {
     minWidth: 650,
   }
+
 });
 
 function TicketLoader({ board }) {
@@ -42,7 +43,7 @@ function Board({ board }) {
       <TableContainer component={Paper}>
         <Table className={classes.table}>
           <TableHead>
-            <TableRow>
+            <TableRow className={classes.header}>
               <TableCell>Ticket Name</TableCell>
               <TableCell align="left">Ticket Description</TableCell>
               <TableCell align="center">Status</TableCell>
