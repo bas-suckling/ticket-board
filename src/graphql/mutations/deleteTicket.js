@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 //Delete a ticket
-export const DELETE_TICKET = gql`
+const DELETE_TICKET = gql`
     mutation deleteTicket($organisationId: ID!, $ticketId: ID!) {
         deleteTicket(organisationId: $organisationId, ticketId: $ticketId) {
             id
@@ -12,3 +12,6 @@ export const DELETE_TICKET = gql`
         }
     }
 `;
+
+
+export default DELETE_TICKET
