@@ -31,14 +31,14 @@ function TicketLoader({ board }) {
   if (error) return `Error! ${error}`;
 
   return (
-    data.board.tickets.map((ticket) => <Ticket board={board} ticket={ticket} />
+    data.board.tickets.map((ticket) => <Ticket board={board} ticket={ticket} key={ticket.id} />
     ))
 }
 
 function Board({ board }) {
   const classes = useStyles();
   return (
-    <div className="board">
+    <div className="board" key={board.id}>
       <h2>{board.name}</h2>
       <TableContainer component={Paper}>
         <Table className={classes.table}>
@@ -52,10 +52,10 @@ function Board({ board }) {
           </TableHead>
           <TableBody>
             <TicketLoader board={board} />
-            <NewTicket board={board} />
           </TableBody>
         </Table>
       </TableContainer>
+      <NewTicket board={board} />
     </div >
   );
 }

@@ -9,10 +9,21 @@ function NewTicketForm({ board }) {
     const { value: description, bind: bindDescription, reset: resetDescription } = useInput('');
     const { value: status, bind: bindStatus, reset: resetStatus } = useInput('TODO');
     let visible = true
-    console.log(status)
 
-    const [newTicket,] = useMutation(PUT_TICKET, {
+    const [newTicket] = useMutation(PUT_TICKET, {
+        update: (cache) => {
+            cache.modify({
+                id: cache.identify(board),
+                fields: {
+                    tickets(existingTickets, {readField}) {
+                        return existingTickets.add((ticketRef) => readField("id", ticketRef))
+                    }
+                }
+            })
+        }
     })
+
+    
 
     return (
         <form onSubmit={e => {

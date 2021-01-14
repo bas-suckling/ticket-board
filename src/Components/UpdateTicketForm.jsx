@@ -11,7 +11,7 @@ function UpdateTicketForm({ board, ticket }) {
     let visible = true
     console.log(status)
 
-    const [updateTicket,] = useMutation(PUT_TICKET, {
+    const [updateTicket] = useMutation(PUT_TICKET, {
     })
 
     return (
