@@ -9,6 +9,7 @@ function NewBoardForm(){
     const { value: name, bind: bindName, reset: resetName } = useInput('');
 
     const [newBoard] = useMutation(PUT_BOARD, {
+        
     })
 
     return(

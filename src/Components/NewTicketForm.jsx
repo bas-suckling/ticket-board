@@ -2,7 +2,7 @@ import { useMutation } from "@apollo/client";
 import { PUT_TICKET } from "../graphql/mutations/putTicket";
 import { organisationId } from '../organisation'
 import { useInput } from './hooks/useInput'
-// import gql from '@apollo/client'
+import gql from '@apollo/client'
 
 function NewTicketForm({ board }) {
     const { value: name, bind: bindName, reset: resetName } = useInput('');
@@ -11,38 +11,28 @@ function NewTicketForm({ board }) {
     const visible = true
 
     const [newTicket] = useMutation(PUT_TICKET, {
-        update: (cache, { data: { addTicket } }) => {
-            cache.modify({
-                id: cache.identify(board),
-                fields: {
-                    // tickets(existingTickets = []) {
-                    //     console.log("respsone from backend",)
-                    //     console.log(existingTickets)
-                    //     const newTicketRef = cache.writeFragment({
-                    //         data: addTicket,
-                    //         fragment: gql`
-                    //       fragment Ticket on Board {
-                    //         id
-                    //         name
-                    //         description
-                    //         status
-                    //         visible
-                    //       }
-                    //     `
-                    //     })
-                    //     return [...existingTickets, newTicketRef]
-                    // }
-
-                    tickets(existingTickets, { readField }) {
-                        return existingTickets.add(() => readField("id") === addTicket.id)
-                    }
-
-
-                }
-            })
-        }
-
-
+        // update: (cache, { data: { addTicket } }) => {
+        //     cache.modify({
+        //         id: cache.identify(board),
+        //         fields: {
+        //             tickets(existingTickets = []) {
+        //                 const newTicketRef = cache.writeFragment({
+        //                     data: addTicket,
+        //                     fragment: gql`
+        //                   fragment newTicket on Ticket {
+        //                     id: addTicket.id
+        //                     name
+        //                     description
+        //                     status: status
+        //                     visible
+        //                   }
+        //                 `
+        //                 })
+        //                 return [...existingTickets, newTicketRef]
+        //             }
+        //         }
+        //     })
+        // }
     })
 
 

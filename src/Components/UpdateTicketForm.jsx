@@ -9,8 +9,7 @@ function UpdateTicketForm({ board, ticket }) {
     const { value: status, bind: bindStatus, reset: resetStatus } = useInput(`${ticket.status}`);
     const visible = true
 
-    const [updateTicket] = useMutation(PUT_TICKET, {
-    })
+    const [updateTicket] = useMutation(PUT_TICKET)
 
     return (
         <form onSubmit={e => {

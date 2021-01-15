@@ -13,6 +13,13 @@ export const GET_BOARDS = gql`
             boards {
                 id
                 name
+                tickets {
+                    id
+                    name
+                    description
+                    status
+                    visible
+                }
             }    
         }   
     }

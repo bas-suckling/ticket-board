@@ -9,7 +9,7 @@ function UpdateTicketButton ({board, ticket}){
     
     return (
     <>
-    <button onClick={onClick}>Update</button>
+    <button onClick={onClick}>Update Ticket</button>
                 {isVisible ? <UpdateTicketForm board={board} ticket={ticket}/> : <br/>}
             </>
     )

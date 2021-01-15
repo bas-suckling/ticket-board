@@ -7,37 +7,22 @@ function DeleteTicketButton({id, board}) {
 
         const [deleteTicket] = useMutation(DELETE_TICKET, {
             variables: { organisationId, ticketId: id },
-            // update: (cache) => {
-            //     cache.modify({
-            //         id: cache.identify(board),
-            //         fields: {
-            //             tickets(existingTickets, {readField}) {
-            //                 return existingTickets.filter((ticketRef) => readField("id", ticketRef) !== id)
-            //             }
-            //         }
-            //     })
-            //     cache.evict({
-            //         id: id
-            //     })
-            //     cache.gc()
-            // }
             update: (cache) => {
                 cache.modify({
                     id: cache.identify(board),
                     fields: {
-                      tickets({ DELETE }) {
-                        return DELETE;
-                      },
-                    },
-                  });
+                        tickets(existingTickets, {readField}) {
+                            return existingTickets.filter((ticketRef) => readField("id", ticketRef) !== id)
+                        }
+                    }
+                })
             }
-            
-
-        });
+      }
+    )
     
     return(
         <>
-            <button onClick={() => deleteTicket({id, board})}>Delete</button>
+            <button onClick={() => deleteTicket({id, board})}>Delete Ticket</button>
         </>
     )
 }
