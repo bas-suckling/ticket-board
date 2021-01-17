@@ -1,18 +1,25 @@
-import {useState} from 'react'
-import UpdateTicketForm from './UpdateTicketForm'
+import { useState } from "react";
+import UpdateTicketForm from "./UpdateTicketForm";
 
-function UpdateTicketButton ({board, ticket}){
+function UpdateTicketButton({ board, ticket }) {
+  const [isVisible, setIsVisible] = useState(false);
 
-    const [isVisible, setIsVisible] = useState(false)
+  const onClick = () => setIsVisible(!isVisible);
 
-    const onClick = () => setIsVisible(!isVisible)
-    
-    return (
+  return (
     <>
-    <button onClick={onClick}>Update Ticket</button>
-                {isVisible ? <UpdateTicketForm board={board} ticket={ticket}/> : <br/>}
-            </>
-    )
+      <button onClick={onClick}>Update Ticket</button>
+      {isVisible ? (
+        <UpdateTicketForm
+          board={board}
+          ticket={ticket}
+          onSubmit={() => setIsVisible(false)}
+        />
+      ) : (
+        <br />
+      )}
+    </>
+  );
 }
 
-export default UpdateTicketButton
+export default UpdateTicketButton;

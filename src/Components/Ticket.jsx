@@ -1,14 +1,23 @@
-import DeleteTicketButton from './DeleteTicketButton'
-import UpdateTicketButton from './UpdateTicketButton';
+import DeleteTicketButton from "./DeleteTicketButton";
+import UpdateTicketButton from "./UpdateTicketButton";
+import "./Ticket.css";
 
 function Ticket({ board, ticket }) {
-    const { id, name, description, status } = ticket;
+  const { name, description, status } = ticket;
 
-    // add ticket should add the result to the tickets field, instead of removing the exisitng one, will sit one level higher on the board
-
-    return (
-            <li> Ticket Name: {name}, Description:  {description}, Status: {status}  <DeleteTicketButton id={id} board={board} /> <UpdateTicketButton board={board} ticket={ticket}/> </li>
-    );
+  return (
+    <li>
+      <span className="ticket-info">
+        Ticket Name: {name}, Description: {description}, Status: {status}
+      </span>
+      <span className="ticket-delete">
+        <DeleteTicketButton ticket={ticket} board={board} />
+      </span>
+      <span className="ticket-update">
+        <UpdateTicketButton board={board} ticket={ticket} />
+      </span>
+    </li>
+  );
 }
 
 export default Ticket;

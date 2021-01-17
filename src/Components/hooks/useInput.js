@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-export const useInput = initialValue => {
-  const [value, setValue] = useState(initialValue);
+export const useInput = (initialValue) => {
+  const [value, setValue] = useState(null);
 
   return {
-    value,
+    value: value ?? initialValue,
     setValue,
-    reset: () => setValue(""),
+    reset: () => setValue(null),
     bind: {
       value,
-      onChange: event => {
+      onChange: (event) => {
         setValue(event.target.value);
-      }
-    }
+      },
+    },
   };
 };
